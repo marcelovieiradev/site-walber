@@ -1,0 +1,238 @@
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* LAYOUT */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+}
+
+.btn-outline {
+  padding: 8px 16px;
+  border: 2px solid #444;
+  border-radius: 6px;
+}
+
+.btn-outline:hover {
+  background: #444;
+  color: #fff;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .nav a {
+    margin: 12px 0;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}
+
+/* HERO */
+.hero-bg {
+  position: relative;
+  background: url("assets/man-with-sport-nutrition.webp") center/cover no-repeat;
+  padding: 140px 0;
+  border-radius: 0 0 60px 60px;
+  color: #fff;
+}
+
+.hero-bg .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  border-radius: 0 0 60px 60px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+}
+
+.hero-content p {
+  max-width: 700px;
+  margin: 15px auto 0;
+  font-size: 1.3rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: #fff;
+  color: #558B2F;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 0;
+}
+
+.section.light {
+  background: #fdfdfd;
+}
+
+.section.gray {
+  background: #f7f7f7;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* SOBRE */
+.sobre-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.sobre-img {
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* SECTION IMAGE */
+.section-img {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+}
+
+/* GRID */
+.grid-3 {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  padding: 28px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  color: #558B2F;
+  margin-bottom: 10px;
+}
+
+/* CONTATO */
+.contact-box {
+  text-align: center;
+}
+
+.contact-box p {
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .sobre-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+}
